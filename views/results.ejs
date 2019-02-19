@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+<main>
+    <div id="main-box" class="card text-center">
+        <h5 class="card-header">Your results:</h5>
+        <div class="card-body ">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        1
+                        <%= currency.from %> equals to
+                        <%= currency.rate %>
+                        <%= currency.to %>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <%= amount %>
+                        <%= currency.from %> is worth
+                        <%= result%>
+                        <%= currency.to %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include('partials/footer'); -%>

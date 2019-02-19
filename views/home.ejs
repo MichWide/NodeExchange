@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+<main>
+    <div id="main-box" class="card text-center">
+        <h5 class="card-header">Calculate currencies</h5>
+        <div class="card-body">
+            <form action="/showExRate" method="GET">
+                <div class="form-group">
+                    <div class="row exchange-row">How much is &nbsp;
+                        <input type="number" name="a" id="amount" class="form-control"> &nbsp;
+                        <select name="from" class="custom-select">
+                            <%- include('partials/currencyList'); -%>
+                        </select>
+                        &nbsp; worth in: &nbsp;
+                        <select name="to" class="custom-select">
+                            <%- include('partials/currencyList'); -%>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary">Submit!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<%- include('partials/footer'); -%>
